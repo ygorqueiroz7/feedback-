@@ -1,12 +1,22 @@
-import { useState } from "react"
 import iconStar from "./images/icon-star.svg"
+import { useState } from "react"
 
 export function App() {
-  const [notaAvaliacao, setNotaAvaliacao] = useState (0)
-  const [submited, setSubmit] = useState (false)
+  const [submited, setSubmit] = useState(false)
+  const [rateNote, setRateNote] = useState (0)
+ 
   
   function handleSubmit() {
-    setSubmit(true)
+    if (rateNote !==0) {
+      setSubmit(true)
+      return
+    }
+
+    alert("Plase, choose a rate button!")
+  }
+
+  function handleChangeRateNote(value) {
+    setRateNote(value)
   }
 
   function handleAlterarNotaAvaliacao(nota) {
@@ -28,11 +38,11 @@ export function App() {
 
 
         <div className="flex justify-between mb-6">
-          <input type="button" value={1} className="bg-dark-blue w-10.5 h-10.5 rounded-full text-sm leading-2 text-medium-grey" onClick={() => handleAlterarNotaAvaliacao(1)}/>
-          <input type="button" value={2} className="bg-dark-blue w-10.5 h-10.5 rounded-full text-sm leading-2 text-medium-grey" onClick={() => handleAlterarNotaAvaliacao(2)}/>
-          <input type="button" value={3} className="bg-dark-blue w-10.5 h-10.5 rounded-full text-sm leading-2 text-medium-grey" onClick={() => handleAlterarNotaAvaliacao(3)}/>
-          <input type="button" value={4} className="bg-dark-blue w-10.5 h-10.5 rounded-full text-sm leading-2 text-medium-grey" onClick={() => handleAlterarNotaAvaliacao(4)}/>
-          <input type="button" value={5} className="bg-dark-blue w-10.5 h-10.5 rounded-full text-sm leading-2 text-medium-grey" onClick={() => handleAlterarNotaAvaliacao(5)}/>
+          <input type="button" value={1} className="bg-dark-blue w-10.5 h-10.5 rounded-full text-sm leading-2 text-medium-grey focus:text-white" onClick={() => handleChangeRateNote (1)}/>
+          <input type="button" value={2} className="bg-dark-blue w-10.5 h-10.5 rounded-full text-sm leading-2 text-medium-grey focus:text-white" onClick={() => handleChangeRateNote (2)}/>
+          <input type="button" value={3} className="bg-dark-blue w-10.5 h-10.5 rounded-full text-sm leading-2 text-medium-grey focus:text-white" onClick={() => handleChangeRateNote (3)}/>
+          <input type="button" value={4} className="bg-dark-blue w-10.5 h-10.5 rounded-full text-sm leading-2 text-medium-grey focus:text-white" onClick={() => handleChangeRateNote (4)}/>
+          <input type="button" value={5} className="bg-dark-blue w-10.5 h-10.5 rounded-full text-sm leading-2 text-medium-grey focus:text-white" onClick={() => handleChangeRateNote (5)}/>
         </div>
 
         <button className="bg-orange w-full py-3 uppercase text-sm rounded-3xl font-bold tracking-1" onClick={handleSubmit}>Submit</button>
