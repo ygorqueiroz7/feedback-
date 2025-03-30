@@ -10,10 +10,8 @@
     --font-overpass: "Overpass", "sans-serif";
 
     --leading-1: 1.35rem;
-    --leading-1: 1.5rem;
 
     --tracking-1: 1.867px;
-
 }
 
 @layer utilities {

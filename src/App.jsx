@@ -21,7 +21,7 @@ export function App() {
 
   return (
     submited === false ? (
-      <div className="bg-gradient-dark mx-6 p-6 rounded-2xl text-white font-overpass">
+      <div className="bg-gradient-dark mx-6 p-6 rounded-2xl text-white font-overpass max-w-103">
         <div className="bg-dark-blue p-4 w-fit rounded-full mb-4">
           <img src={iconStar} alt="icon star" />
         </div>
@@ -32,17 +32,17 @@ export function App() {
 
 
         <div className="flex justify-between mb-6">
-          <input type="button" value={1} className="bg-dark-blue w-10.5 h-10.5 rounded-full text-medium-grey text-sm font-bold focus:bg-medium-grey focus:text-white" onClick={() => handleMudarNotaAvalicao (1)}/>
-          <input type="button" value={2} className="bg-dark-blue w-10.5 h-10.5 rounded-full text-medium-grey text-sm font-bold focus:bg-medium-grey focus:text-white" onClick={() => handleMudarNotaAvalicao (2)}/>
-          <input type="button" value={3} className="bg-dark-blue w-10.5 h-10.5 rounded-full text-medium-grey text-sm font-bold focus:bg-medium-grey focus:text-white" onClick={() => handleMudarNotaAvalicao (3)}/>
-          <input type="button" value={4} className="bg-dark-blue w-10.5 h-10.5 rounded-full text-medium-grey text-sm font-bold focus:bg-medium-grey focus:text-white" onClick={() => handleMudarNotaAvalicao (4)}/>
-          <input type="button" value={5} className="bg-dark-blue w-10.5 h-10.5 rounded-full text-medium-grey text-sm font-bold focus:bg-medium-grey focus:text-white" onClick={() => handleMudarNotaAvalicao (5)}/>
+          <input type="button" value={1} className="bg-dark-blue w-10.5 h-10.5 rounded-full text-medium-grey text-sm font-bold focus:bg-medium-grey focus:text-white sm:w-13 sm:h-13 hover:bg-orange hover:text-white hover:cursor-pointer" onClick={() => handleMudarNotaAvalicao (1)}/>
+          <input type="button" value={2} className="bg-dark-blue w-10.5 h-10.5 rounded-full text-medium-grey text-sm font-bold focus:bg-medium-grey focus:text-white sm:w-13 sm:h-13 hover:bg-orange hover:text-white hover:cursor-pointer" onClick={() => handleMudarNotaAvalicao (2)}/>
+          <input type="button" value={3} className="bg-dark-blue w-10.5 h-10.5 rounded-full text-medium-grey text-sm font-bold focus:bg-medium-grey focus:text-white sm:w-13 sm:h-13 hover:bg-orange hover:text-white hover:cursor-pointer" onClick={() => handleMudarNotaAvalicao (3)}/>
+          <input type="button" value={4} className="bg-dark-blue w-10.5 h-10.5 rounded-full text-medium-grey text-sm font-bold focus:bg-medium-grey focus:text-white sm:w-13 sm:h-13 hover:bg-orange hover:text-white hover:cursor-pointer" onClick={() => handleMudarNotaAvalicao (4)}/>
+          <input type="button" value={5} className="bg-dark-blue w-10.5 h-10.5 rounded-full text-medium-grey text-sm font-bold focus:bg-medium-grey focus:text-white sm:w-13 sm:h-13 hover:bg-orange hover:text-white hover:cursor-pointer" onClick={() => handleMudarNotaAvalicao (5)}/>
         </div>
 
-        <button  onClick={handleSubmit} className="bg-orange w-full uppercase tracking-1 font-bold rounded-3xl text-sm py-3">Submit</button>
+        <button  onClick={handleSubmit} className="bg-orange w-full uppercase tracking-1 font-bold rounded-3xl text-sm py-3 hover:bg-white hover:text-orange hover:cursor-pointer">Submit</button>
       </div>
     ) : (
-      <div className="bg-gradient-dark text-white mx-6 p-6 rounded-2xl font-overpass">
+      <div className="bg-gradient-dark text-white mx-6 p-6 rounded-2xl font-overpass max-w-103">
       
       <img className="mx-auto mb-6" src={illustrationThankYou} alt="illustration thank you" />
 
